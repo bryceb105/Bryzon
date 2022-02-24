@@ -4,35 +4,18 @@
 
 @model BooksViewModel
 
-<h1 style="font-family: Arial">Bryzon Books</h1>
+@*<h1 style="font-family: Arial">Bryzon Books</h1>
 <br />
-<h4 style="font-family: Times New Roman"> Check out our new list of availible books:</h4>
+<h4 style="font-family: Times New Roman"> Check out our new list of availible books:</h4>*@
 
 @*print out each Book and information found in database*@
 @foreach (Book b in Model.Books)
 {
-    <div class="container">
-        <div class="row border">
-            <div class="col align-self-center">
-                <h3 style="font-family: Arial" class="text-center">@b.Title</h3>
-            </div>
-        </div>
-        <div class="row border">
-            <div class="col align-self-center text-center">
-                <ul style="list-style-type:none;">
-                    <li style="font-family: Times New Roman">Author: @b.Author</li>
-                    <li style="font-family: Times New Roman">Isbn Number: @b.Isbn</li>
-                    <li style="font-family: Times New Roman">Classification: @b.Classification</li>
-                    <li style="font-family: Times New Roman">Category: @b.Category</li>
-                    <li style="font-family: Times New Roman">Page Count: @b.PageCount</li>
-                    <li style="font-family: Times New Roman">Price: $@b.Price</li>
-                </ul>
-            </div>
-        </div>
-    </div>
+   <partial name= "ProjectSummary" model="b"/>
+}
 
-    <br />
-    }
-
-    @*Navigate to different pages of books*@
-    <div page-yeah="@Model.PageInfo" page-action="Index" class="text-center"></div>
+@*Navigate to different pages of books*@
+<div class="text-right">
+    <div page-yeah="@Model.PageInfo" page-action="Index" class="btn-group pull-right m-1" page-class="btn"
+         page-class-normal="btn-outline-dark" page-class-selected="btn-primary" page-classes-enabled="true"></div>
+</div>
