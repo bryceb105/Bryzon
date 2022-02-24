@@ -31,7 +31,7 @@ namespace Bryzon.Models
         {
 
             //help
-            double sum = Items.Sum(x => x.Quantity * 25);
+            double sum = Items.Sum(x => x.Quantity * x.Book.Price);
 
             return sum;
         }
@@ -44,6 +44,6 @@ namespace Bryzon.Models
         public int LineID { get; set; }
         public Book Book { get; set; }
         public int Quantity { get; set;}
-        public int Price { get; set; }
+        public double Price { get; set; }
     }
 }
