@@ -19,13 +19,13 @@
             <li style="font-family: Times New Roman">Isbn Number: @Model.Isbn</li>
             <li style="font-family: Times New Roman">Category: @Model.Category</li>
             <li style="font-family: Times New Roman">Page Count: @Model.PageCount</li>
-            <li style="font-family: Times New Roman">Price: $@Model.Price</li>
+            <li style="font-family: Times New Roman">Price: $@Model.Price.ToString("0.00")</li>
         </ul>
     </div>
     <form method="post" asp-page="/Shop">
 
         <input type="hidden" asp-for="@Model.BookId" />
-        <input type="hidden" name="returnUr" value="@ViewContext.HttpContext.Request.PathAndQuery()" />
+        <input type="hidden" name="returnUrl" value="@ViewContext.HttpContext.Request.PathAndQuery()" />
 
         <span class="card-text">
             <button type="submit" class="btn btn-success btn-sm float-end">Purchase</button>
