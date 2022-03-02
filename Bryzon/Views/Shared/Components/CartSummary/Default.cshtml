@@ -1,0 +1,17 @@
+﻿@model Bryzon.Models.Basket
+@using Bryzon.Infrustructure
+
+@*Create Shoping ICON and price for top of page*@
+<div class="">
+    @if (Model.Items.Count() > 0)
+    {
+        <small class="navbar-text">
+            <b>Your cart:</b>
+            @Model.Items.Sum(x => x.Quantity) item(s)
+            @Model.CalculateTotal().ToString("c")
+        </small>
+    }
+    <a class="btn btn-sm btn-secondary navbar-btn" asp-action="Checkout" asp-controller="Checkout">
+        <i class="fa fa-shopping-cart"></i>
+    </a>
+</div>
