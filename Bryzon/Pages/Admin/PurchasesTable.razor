@@ -12,10 +12,10 @@
             @foreach (Checkout d in Checkout)
             {
                 <tr>
-                    <td>@d.Name</td>
-                    <td>@d.Zip</td>
-                    <td>BookTitle</td>
-                    <td>Quantity</td>
+                    <th>@d.Name</th>
+                    <th>Zip Code: @d.Zip</th>
+                    <th>BookTitle</th>
+                    <th>Quantity</th>
 
                     <td>
                         <button class="btn btn-small btn-danger" @onclick="@(x => PurchaseSelected.InvokeAsync(d.CheckoutId))">
