@@ -1,6 +1,8 @@
 ﻿@inherits LayoutComponentBase
+@*Layout for admin page*@
 
-<div class="bg-info text-white p-2">
+@*NOT DONE IN CLASS - Rounded corners*@
+<div class="bg-info text-white p-2 rounded">
     <span class="navbar-brand m-lg-2">Bryzon Administration</span>
 </div>
 
@@ -10,6 +12,7 @@
 
         <div class="col-3">
 
+            @*links to Books and Projects/Shipments page*@
             <div class="d-grid gap-2">
                 <NavLink class="btn btn-outline-primary" href="/admin/books"
                          ActiveClass="btn-primary text-white" Match="NavLinkMatch.Prefix">Books</NavLink>

@@ -1,6 +1,7 @@
 ﻿@page "/admin/purchases"
 @inherits OwningComponentBase<ICheckoutRepository>
 
+@*Show table of purchases by shipment*@
 <PurchasesTable TableTitle="Unshipped Purchases" Checkout="UncollectedPurchases"
                 ButtonLabel="Shipped" PurchaseSelected="CollectPurchase"></PurchasesTable>
 

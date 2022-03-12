@@ -15,13 +15,13 @@
     <tbody>
         @if(BookData?.Count() > 0)
         {
-            //Books
+            //List all books Books
             @foreach (Book b in BookData)
                 {
                     <tr>
                         <td>@b.BookId</td>
                         <td>@b.Title</td>
-                        <td>@b.Price</td>
+                        <td>$@b.Price</td>
 
                         <td>
                             <NavLink class="btn btn-info btn-sm" href="@GetDetailsUrl(b.BookId)">Details</NavLink>
