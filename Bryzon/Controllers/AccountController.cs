@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 
 namespace Bryzon.Controllers
 {
+    //set up login controller
     public class AccountController : Controller
     {
         private UserManager<IdentityUser> userManager;
@@ -24,6 +25,7 @@ namespace Bryzon.Controllers
             return View(new LoginModel {ReturnUrl = returnUrl});
         }
 
+        //check to see if login information exists in data base to either accept or deny
         [HttpPost]
         public async Task <IActionResult> Login (LoginModel loginModel)
         {

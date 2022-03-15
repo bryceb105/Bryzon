@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 
 namespace Bryzon.Models
 {
+    //Seed login information
     public static class IdentitySeedData
     {
         private const string adminUser = "Admin";
